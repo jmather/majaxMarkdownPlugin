@@ -1,0 +1,5 @@
+pre {
+	padding: 3px;
+	background-color: lightgreen;
+}
+#style_guide table, #style_guide table tbody, #style_guide table tr, #style_guide table td { border: 0px !important; }
