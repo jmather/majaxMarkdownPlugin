@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>majaxMarkdownPlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>Provides a Markdown editor for Symfony, and related rendering tools.</summary>
+ <description>Provides a Markdown editor for Symfony, and related rendering tools.</description>
+ <lead>
+  <name>JMather</name>
+  <user>JMather</user>
+  <email>jmather@itsmajax.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-11-22</date>
+ <time>12:08:21</time>
+ <version>
+  <release>1.0.0</release>
+  <api>1.0.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+ <notes>
+Initial release
+ </notes>
+ <contents>
+  <dir baseinstalldir="/dev/null" name="/">
+   <file baseinstalldir="/dev/null" md5sum="3f43d7705e724f0ebd3a9c14173dab37" name="config/majaxMarkdownPluginConfiguration.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="446c49ba40feb28b5bf731addd7f8827" name="lib/majaxMarkdown.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="a4f9fd4edc329d78bf888430f67edbb6" name="lib/widget/majaxWidgetFormMarkdownEditor.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="69799b18ee24d611da4be69862cef0fe" name="modules/majaxMarkdown/actions/actions.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="8a72049656cf667a4d19e7cebf3f7086" name="modules/majaxMarkdown/config/view.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="f1fb0ed5442e77cd01beadff605f0567" name="modules/majaxMarkdown/lib/BasemajaxMarkdownActions.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="7875b422e96e473e950e1e681c9a06cb" name="modules/majaxMarkdown/templates/previewFrameSuccess.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="f8992993d973fdf27900bacdb051af71" name="modules/majaxMarkdown/templates/previewSuccess.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="9ac2c832a5888e6dd59b69a2060b91c4" name="test/bin/prove.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="c0ce2410540eb0f406cef0483981a30d" name="test/bootstrap/functional.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="28e9fd2c334dee7287f03df72d02d66b" name="test/bootstrap/unit.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="ec0244c82ba8f52899e48b4e473f78e8" name="test/fixtures/project/symfony" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="f41593e40a97733e17f41b71a139bec8" name="test/fixtures/project/apps/frontend/config/app.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="a57e05bc507e8b528e19b8c40d9c0095" name="test/fixtures/project/apps/frontend/config/cache.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="a88ede767c3029a8a089b6cefc0ec057" name="test/fixtures/project/apps/frontend/config/factories.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="7e83763cc5fc6e227c2c5e7e5facf9d5" name="test/fixtures/project/apps/frontend/config/filters.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="1b1e5eb069c9708079653452d6b5c559" name="test/fixtures/project/apps/frontend/config/frontendConfiguration.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="25108de3ae9921c47ae2f4897e0fb75b" name="test/fixtures/project/apps/frontend/config/routing.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="43e0ff3a33ac86478b3f9a769a848bfb" name="test/fixtures/project/apps/frontend/config/security.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="f3c768fd6ebfaad254609ded6013103e" name="test/fixtures/project/apps/frontend/config/settings.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="286ac00a00fb38da71776405238fa152" name="test/fixtures/project/apps/frontend/config/view.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="215548048bbbdd100411afc00252a797" name="test/fixtures/project/apps/frontend/lib/myUser.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="d837c335564e5079f50bdfe2cd93a6e6" name="test/fixtures/project/apps/frontend/templates/layout.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="568b37b2187630883f5ed24e1f97b1a0" name="test/fixtures/project/config/ProjectConfiguration.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="e92cbb54e33fbbce0b06f9b36eaa6e7e" name="test/fixtures/project/config/properties.ini" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="78ae708496b5f45951a083f26704d03d" name="test/fixtures/project/config/rsync_exclude.txt" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="c25e418a1392a0c83b11a467d8b5a7cd" name="test/fixtures/project/config/settings.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d1477bd2dcd946041a7b7f948a2aa81d" name="test/fixtures/project/data/fixtures/fixtures.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="9571dce5025587f89468f63e1af20c5e" name="test/fixtures/project/lib/form/BaseForm.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="9351bf99d8167cd9b73119625341e637" name="test/fixtures/project/test/bootstrap/functional.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="ef14875d3a428204d066f5a4cea1a659" name="test/fixtures/project/test/bootstrap/unit.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="58358960364e26d020c98d05aa8f27ad" name="test/fixtures/project/web/robots.txt" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="test/fixtures/project/web/css/main.css" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="9975d9e0e8447d2b9edd12beda943d37" name="test/functional/majaxMarkdownActionsTest.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="62770c8a18c6f4c3707ebb065b1174ce" name="vendor/markdown/markdown.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="86f87d6c1e15450b57606c43bfdd4e05" name="vendor/markdown_extra/markdown.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="24a30db3c5c4aa2ab385b0cb752dc20f" name="vendor/smartypants/PHP SmartyPants Readme.txt" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="089f537477f76dbbb8bcf998733fb924" name="vendor/smartypants/smartypants.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="92d76592de237a314e65d6371c1ba552" name="vendor/smartypants_typographer/License.text" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="cd521fae8df57a56b00717cf07b834dc" name="vendor/smartypants_typographer/PHP SmartyPants Readme.txt" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="32de2def5bd7d77ed7a06f0efe6503dd" name="vendor/smartypants_typographer/smartypants.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="65508440ad77f2cefaa142b033e9c672" name="web/css/display.css" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="65ce25544204719cd36bac40505ca1a1" name="web/css/preview.css" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="fcaf1ab8c0be20d0892b14bf23d6111e" name="web/js/markitup/jquery.markitup.js" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="77d36ea26fd4de71d2feb702763b25c6" name="web/js/markitup/jquery.markitup.pack.js" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="60834e1437e7628257ed35d2292ded43" name="web/js/markitup/readme.txt" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="9ce08717a47fc0f7449d1a3463f4b01e" name="web/js/markitup/sets/default/set.js" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="935a2f420da152794d64d7b547582f77" name="web/js/markitup/sets/default/style.css" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d60427ad6f59300010958abbe021ad16" name="web/js/markitup/sets/default/images/bold.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="3b00235a38f897d1d866dc9fc33e255e" name="web/js/markitup/sets/default/images/clean.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="82ab6ab31febf1b85de2bbea054c79ce" name="web/js/markitup/sets/default/images/image.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="fca8af7918d79e4716235e6232a4ada5" name="web/js/markitup/sets/default/images/italic.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="a5dc8319bff018855ee0441e4a3b54b9" name="web/js/markitup/sets/default/images/link.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d2040c34ba1ffd8fa5b72ab37be11eca" name="web/js/markitup/sets/default/images/picture.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="c9b528b9541e127967eda62f79118ef0" name="web/js/markitup/sets/default/images/preview.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="cf25f036aa3d24212a3191b04a0b4024" name="web/js/markitup/sets/default/images/stroke.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="52936743700503c05ae4857e052c9292" name="web/js/markitup/sets/markdown/readme.txt" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="ac2fae9c68674444f4ce8224e0408399" name="web/js/markitup/sets/markdown/set.js" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="557e098867bbac3d280424833011bbd1" name="web/js/markitup/sets/markdown/style.css" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d60427ad6f59300010958abbe021ad16" name="web/js/markitup/sets/markdown/images/bold.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="13ad2158a4889c26a851f99b261e4c5c" name="web/js/markitup/sets/markdown/images/code.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="eb2d1b1e1e4f1006b5e1a788627f08eb" name="web/js/markitup/sets/markdown/images/h1.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="b28528ee22ba4464d0fddbe471b29b44" name="web/js/markitup/sets/markdown/images/h2.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="fc804ff01e33c34756e865a07fa3e384" name="web/js/markitup/sets/markdown/images/h3.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="fb629d0b73d5023fcb26bd4cd6c6d767" name="web/js/markitup/sets/markdown/images/h4.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="ec6f3cbaafa84e6e5d810807d631177d" name="web/js/markitup/sets/markdown/images/h5.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="40793a50b306da7b85b476bf3d228bea" name="web/js/markitup/sets/markdown/images/h6.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="fca8af7918d79e4716235e6232a4ada5" name="web/js/markitup/sets/markdown/images/italic.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="a5dc8319bff018855ee0441e4a3b54b9" name="web/js/markitup/sets/markdown/images/link.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="2130eaaf40e8dceefe00227573c344a4" name="web/js/markitup/sets/markdown/images/list-bullet.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="88f7aa99a1ade6526c72711d8614bc40" name="web/js/markitup/sets/markdown/images/list-numeric.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d2040c34ba1ffd8fa5b72ab37be11eca" name="web/js/markitup/sets/markdown/images/picture.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="c9b528b9541e127967eda62f79118ef0" name="web/js/markitup/sets/markdown/images/preview.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="05d28091baa2679213ecb083c0a24f22" name="web/js/markitup/sets/markdown/images/quotes.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="083fac4eaf7199742f0a73f0ce78abe5" name="web/js/markitup/skins/markitup/style.css" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="db87e56a5e3fdf15b1d8126b33963296" name="web/js/markitup/skins/markitup/images/bg-container.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="dd488a624c15fc378eecf00d7b614f2f" name="web/js/markitup/skins/markitup/images/bg-editor-bbcode.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="b8eb6a27932cb0ccf4807fa9d3eefa4e" name="web/js/markitup/skins/markitup/images/bg-editor-dotclear.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="6dd19a15009777641f0a176339747790" name="web/js/markitup/skins/markitup/images/bg-editor-html.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="b6d09997cf5766fe066fe4c59e8fef0b" name="web/js/markitup/skins/markitup/images/bg-editor-json.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="b02ba41d86785e10b708da129fbf2758" name="web/js/markitup/skins/markitup/images/bg-editor-markdown.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="cd67a5844eac4c437309557be38db4f8" name="web/js/markitup/skins/markitup/images/bg-editor-textile.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="f8c95d87c2c6142681fba8291d0fe9df" name="web/js/markitup/skins/markitup/images/bg-editor-wiki.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="50b950f06b5c19f4bcc24950b51b260d" name="web/js/markitup/skins/markitup/images/bg-editor-xml.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="67d18d72bb54e505fe3a08dbbf343afe" name="web/js/markitup/skins/markitup/images/bg-editor.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="46b6c9619e6749df61842471f983b23b" name="web/js/markitup/skins/markitup/images/handle.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d74483b594d0694f0cab86967b8f9535" name="web/js/markitup/skins/markitup/images/menu.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="c51684fc526fda5e6fa21db9e72c2fe8" name="web/js/markitup/skins/markitup/images/submenu.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="c5050344ce62abe8fe15ccf7a82c91ad" name="web/js/markitup/skins/simple/style.css" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="46b6c9619e6749df61842471f983b23b" name="web/js/markitup/skins/simple/images/handle.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="d74483b594d0694f0cab86967b8f9535" name="web/js/markitup/skins/simple/images/menu.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="c51684fc526fda5e6fa21db9e72c2fe8" name="web/js/markitup/skins/simple/images/submenu.png" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="dfc4c5b56b115d52e7ca83dd848141e7" name="web/js/markitup/templates/preview.css" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="50ca53cf759b1c88a3ed8b29e4b2c3ed" name="web/js/markitup/templates/preview.html" role="doc" />
+   <file baseinstalldir="/dev/null" md5sum="a1c724163c8239ae0215455ea566d6f1" name="LICENSE" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="cd3ab61a4b11b63a41269ecb410c7824" name="README" role="data" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.3.0</min>
+    <max>1.5.0</max>
+    <exclude>1.5.0</exclude>
+   </package>
+   <package>
+    <name>majaxJqueryPlugin</name>
+    <channel>plugins.symfony-project.org</channel>
+    <min>1.0.0</min>
+    <max>1.0.0</max>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2010-11-22</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+Initial release
+   </notes>
+  </release>
+ </changelog>
+</package>
