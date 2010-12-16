@@ -17,8 +17,5 @@ class majaxMarkdownPluginConfiguration extends sfPluginConfiguration
    */
   public function initialize()
   {
-    $modules = sfConfig::get('sf_enabled_modules', array());
-    $modules[] = 'majaxMarkdown';
-    sfConfig::set('sf_enabled_modules', $modules);
   }
 }

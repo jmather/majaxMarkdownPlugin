@@ -10,6 +10,10 @@ It assumes majaxJqueryPlugin is loaded (or some form of jQuery 1.4.x and jQuery 
 * MarkItUp: http://markitup.jaysalvat.com/home/
 * majaxJqueryPlugin: https://github.com/jmather/majaxJqueryPlugin
 
+##Basic Setup
+
+Enable the majaxMarkdown module in your application's settings.yml
+
 To use the widget in your Form class:
 
     class ... snip
