@@ -1,0 +1,8 @@
+all:
+  majaxMarkdown:
+    style: markdown_extra
+    smartypants_enabled: true
+    smartypants_style: smartypants_typographer
+    smartypants_options: 1
+    post_render: false
+    post_preview: false

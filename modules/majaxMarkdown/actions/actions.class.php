@@ -14,7 +14,13 @@ class majaxMarkdownActions extends BasemajaxMarkdownActions
 {
   public function executePreview(sfWebRequest $request)
   {
-    $this->preview = majaxMarkdown::transform($request->getParameter('markdown'));
+    $preview = majaxMarkdown::transform($request->getParameter('markdown'));
+    if (sfConfig::get('app_majaxMarkdown_post_preview', false))
+    {
+      $render = sfConfig::get('app_majaxMarkdown_post_preview');
+      $preview = call_user_func($render, $preview);
+    }
+    $this->preview = $preview;
   }
   public function executePreviewFrame(sfWebRequest $request)
   {
