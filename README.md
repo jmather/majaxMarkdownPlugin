@@ -42,8 +42,22 @@ You can control it with options in your app.yml:
 
 
     all:
-      markdown:
+      majaxMarkdown:
         style: markdown_extra # choose markdown or markdown_extra
         smartypants_enabled: true # true / false
         smartypants_style: smartypants_typographer # choose smartypants or smartypants_typographer
         smartypants_options: 1 # You'll want to check the smartypants docs for more info on this...
+        post_render: false
+        post_preview: false
+
+
+##Adding Post Renderers
+
+You can post-process both the generated text, and also only the preview text, by supplying what function to
+run to app_majaxMedia_post_render or app_majaxMedia_post_preview like so:
+
+     sfConfig::set('app_majaxMedia_post_render', array('className', 'static_function'));
+
+or
+
+    sfConfig::set('app_majaxMedia_post_preview', 'some_function_name');
