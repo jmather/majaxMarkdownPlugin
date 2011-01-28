@@ -8,6 +8,8 @@ class majaxWidgetFormMarkdownEditor extends sfWidgetFormTextarea {
     parent::configure($options, $attributes);
     $this->addOption('skin', 'simple');
     $this->addOption('set', 'markdown');
+    $this->addOption('stacked', false);
+    $this->addOption('height', null);
   }
   
   public function render($name, $value = null, $attributes = array(), $errors = array())
@@ -21,6 +23,14 @@ class majaxWidgetFormMarkdownEditor extends sfWidgetFormTextarea {
     $resp->addStylesheet('/majaxMarkdownPlugin/css/display.css');
     $id = $this->generateId($name);
     $out = '';
+    if ($this->getOption('stacked') == true)
+    {
+      $attributes['style'] = 'width: 98% !important;';
+    }
+    if ($this->getOption('height') !== null)
+    {
+      $out .= '<style>#'.$id.' { height: '.$this->getOption('height').' !important; }</style>';
+    }
     $out .= parent::render($name, $value, $attributes, $errors);
     $out .= '<button id="'.$id.'_style_guide_button" aria-disabled="false" role="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" id="button"><span class="ui-button-text">Open Style Guide</span></button>';
     $out .= '
@@ -183,8 +193,15 @@ Violets are blue.
 	myMarkdownSettings[\'previewPosition\'] = \'before\';
 	myMarkdownSettings[\'previewParserPath\'] = \''.url_for('majaxMarkdown/preview').'\';
 	myMarkdownSettings[\'previewAutoRefresh\'] = true;
-	$(\'#'.$id.'\').markItUp(mySettings);
-	$(\'#'.$id.'\').before(\'<iframe style="margin-top: 22px; width: 48%; float: right;" src="'.url_for('majaxMarkdown/previewFrame?id='.$id).'" id="'.$id.'_preview_panel" name="'.$id.'_preview_panel"></iframe>\');
+	$(\'#'.$id.'\').markItUp(mySettings);';
+    if ($this->getOption('stacked') == false)
+      $out .= '
+	$(\'#'.$id.'\').before(\'<iframe style="margin-top: 22px; width: 48%; float: right;" src="'.url_for('majaxMarkdown/previewFrame?id='.$id).'" id="'.$id.'_preview_panel" name="'.$id.'_preview_panel"></iframe>\');';
+    else
+      $out .= '
+	$(\'#'.$id.'\').parent().append(\'<br /><iframe style="width: 99%;" src="'.url_for('majaxMarkdown/previewFrame?id='.$id).'" id="'.$id.'_preview_panel" name="'.$id.'_preview_panel"></iframe>\');';
+
+    $out .= '
 	var timedFunction = function() { $(\'#'.$id.'_preview_panel\').css(\'height\', $(\'#'.$id.'\').height()+\'px\'); };
 	intHeightTimer = setInterval(timedFunction, 1000);
 	$(document).bind(\'unload\', function() { clearInterval(intHeightTimer); });
