@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Preview Frame</title>
-		<link type="text/css" href="/majaxMarkdownPlugin/css/preview.css" rel="stylesheet" />
+		<?php include_stylesheets() ?>
 	</head>
 	<body>
 		<div id="preview_content">
