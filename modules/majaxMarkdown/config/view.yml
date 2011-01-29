@@ -1,2 +1,3 @@
 previewFrameSuccess:
-  layout: false
+  has_layout: false
+  stylesheets: [-*, /majaxMarkdownPlugin/css/preview.css]
