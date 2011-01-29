@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-    http://pear.php.net/dtd/tasks-1.0.xsd
-    http://pear.php.net/dtd/package-2.0
-    http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
  <name>majaxMarkdownPlugin</name>
  <channel>plugins.symfony-project.org</channel>
  <summary>Provides a Markdown editor for Symfony, and related rendering tools.</summary>
@@ -13,11 +10,11 @@
   <email>jmather@itsmajax.com</email>
   <active>yes</active>
  </lead>
- <date>2010-12-17</date>
- <time>10:50:00</time>
+ <date>2011-01-28</date>
+ <time>21:42:22</time>
  <version>
-  <release>1.1.0</release>
-  <api>1.1.0</api>
+  <release>1.2.0</release>
+  <api>1.2.0</api>
  </version>
  <stability>
   <release>stable</release>
@@ -29,13 +26,14 @@ Initial release
  </notes>
  <contents>
   <dir baseinstalldir="/dev/null" name="/">
-   <file baseinstalldir="/dev/null" md5sum="3f43d7705e724f0ebd3a9c14173dab37" name="config/majaxMarkdownPluginConfiguration.class.php" role="php" />
-   <file baseinstalldir="/dev/null" md5sum="446c49ba40feb28b5bf731addd7f8827" name="lib/majaxMarkdown.class.php" role="php" />
-   <file baseinstalldir="/dev/null" md5sum="a4f9fd4edc329d78bf888430f67edbb6" name="lib/widget/majaxWidgetFormMarkdownEditor.class.php" role="php" />
-   <file baseinstalldir="/dev/null" md5sum="69799b18ee24d611da4be69862cef0fe" name="modules/majaxMarkdown/actions/actions.class.php" role="php" />
-   <file baseinstalldir="/dev/null" md5sum="8a72049656cf667a4d19e7cebf3f7086" name="modules/majaxMarkdown/config/view.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="6d0f7bd21dfdd9f7453f0476909bf0ed" name="config/app.yml" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="0f8c0c9de2890778efdc5fc2db27bb02" name="config/majaxMarkdownPluginConfiguration.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="24242694692287a8ee4c00d9a7f1af77" name="lib/majaxMarkdown.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="5cffb08db680c3d075003c5e2c7cf337" name="lib/widget/majaxWidgetFormMarkdownEditor.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="94c2e179aacaa85fa29fd7099200232f" name="modules/majaxMarkdown/actions/actions.class.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="6b82ce3602d1e493d5ae3ac14b3d859a" name="modules/majaxMarkdown/config/view.yml" role="data" />
    <file baseinstalldir="/dev/null" md5sum="f1fb0ed5442e77cd01beadff605f0567" name="modules/majaxMarkdown/lib/BasemajaxMarkdownActions.class.php" role="php" />
-   <file baseinstalldir="/dev/null" md5sum="7875b422e96e473e950e1e681c9a06cb" name="modules/majaxMarkdown/templates/previewFrameSuccess.php" role="php" />
+   <file baseinstalldir="/dev/null" md5sum="b004418f9306e107dd9711c51cbdcb07" name="modules/majaxMarkdown/templates/previewFrameSuccess.php" role="php" />
    <file baseinstalldir="/dev/null" md5sum="f8992993d973fdf27900bacdb051af71" name="modules/majaxMarkdown/templates/previewSuccess.php" role="php" />
    <file baseinstalldir="/dev/null" md5sum="9ac2c832a5888e6dd59b69a2060b91c4" name="test/bin/prove.php" role="php" />
    <file baseinstalldir="/dev/null" md5sum="c0ce2410540eb0f406cef0483981a30d" name="test/bootstrap/functional.php" role="php" />
@@ -124,7 +122,7 @@ Initial release
    <file baseinstalldir="/dev/null" md5sum="dfc4c5b56b115d52e7ca83dd848141e7" name="web/js/markitup/templates/preview.css" role="data" />
    <file baseinstalldir="/dev/null" md5sum="50ca53cf759b1c88a3ed8b29e4b2c3ed" name="web/js/markitup/templates/preview.html" role="doc" />
    <file baseinstalldir="/dev/null" md5sum="a1c724163c8239ae0215455ea566d6f1" name="LICENSE" role="data" />
-   <file baseinstalldir="/dev/null" md5sum="cd3ab61a4b11b63a41269ecb410c7824" name="README" role="data" />
+   <file baseinstalldir="/dev/null" md5sum="ff626d6c0748e322a984cded75381a72" name="README" role="data" />
   </dir>
  </contents>
  <dependencies>
@@ -180,6 +178,21 @@ Initial release
    <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
    <notes>
 Added post processing configuration, and post preview configuration, to customize rendering.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.2.0</release>
+    <api>1.2.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2011-01-28</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+Initial release
    </notes>
   </release>
  </changelog>
