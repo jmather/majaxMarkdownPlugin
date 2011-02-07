@@ -6,3 +6,4 @@ all:
     smartypants_options: 1
     post_render: false
     post_preview: false
+    enable_wvText_converter: false

@@ -33,6 +33,10 @@ class majaxWidgetFormMarkdownEditor extends sfWidgetFormTextarea {
     }
     $out .= parent::render($name, $value, $attributes, $errors);
     $out .= '<button id="'.$id.'_style_guide_button" aria-disabled="false" role="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" id="button"><span class="ui-button-text">Open Style Guide</span></button>';
+
+    if (sfConfig::get('app_majaxMarkdown_enable_wvText_converter') !== false)
+      $out .= ' <a href="/majaxMarkdownPlugin/converter.php" target="_blank">Convert A Word File</a>';
+
     $out .= '
 <div id="'.$id.'_style_guide" title="Style Guide">
 <table width="100%"><tbody><tr><td valign="top">
