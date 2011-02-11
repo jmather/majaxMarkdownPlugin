@@ -3,7 +3,7 @@ class majaxMarkdown
 {
 	public static function transform($string)
 	{
-		$path = dirname(__FILE__).'/../vendor/'.sfConfig::get('app_majaxMarkdown_style', 'markdown_extra').'/markdown.php';
+		$path = dirname(__FILE__).'/../vendor/'.sfConfig::get('app_majaxMarkdown_style', 'majax_markdown_extra').'/markdown.php';
 		require_once($path);
 		$string = Markdown($string);
 		if (sfConfig::get('app_majaxMarkdown_smartypants_enabled', true))

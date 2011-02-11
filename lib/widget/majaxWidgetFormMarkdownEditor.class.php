@@ -42,9 +42,7 @@ class majaxWidgetFormMarkdownEditor extends sfWidgetFormTextarea {
 <table width="100%"><tbody><tr><td valign="top">
 <h3>Phrase Emphasis</h3>
 
-<pre><code>*italic*   **bold**
-_italic_   __bold__
-</code></pre>
+<pre><code>*italic*   **bold**   _underline_</code></pre>
 
 <h3>Headers</h3>
 

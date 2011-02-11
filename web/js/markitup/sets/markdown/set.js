@@ -22,7 +22,8 @@ mySettings = {
 //		{name:'Heading 6', key:'6', openWith:'###### ', placeHolder:'Your title here...' },
 		{separator:'---------------' },		
 		{name:'Bold', key:'B', openWith:'**', closeWith:'**'},
-		{name:'Italic', key:'I', openWith:'_', closeWith:'_'},
+		{name:'Italic', key:'I', openWith:'*', closeWith:'*'},
+		{name:'Underline', key:'U', openWith:'_', closeWith:'_'},
 		{separator:'---------------' },
 		{name:'Bulleted List', openWith:'- ' },
 		{name:'Numeric List', openWith:function(markItUp) {
@@ -31,7 +32,6 @@ mySettings = {
 		{separator:'---------------' },
 		{name:'Picture', key:'P', replaceWith:'![[![Alternative text]!]]([![Url:!:http://]!] "[![Title]!]")'},
 		{name:'Link', key:'L', openWith:'[', closeWith:']([![Url:!:http://]!] "[![Title]!]")', placeHolder:'Your text to link here...' },
-		{separator:'---------------'},	
 		{name:'Quotes', openWith:'> '}
 //		{name:'Code Block / Code', openWith:'(!(\t|!|`)!)', closeWith:'(!(`)!)'},
 //		{separator:'---------------'},
