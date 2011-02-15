@@ -27,7 +27,7 @@ function cleanupHtml($str)
         $str = str_replace($sets, '', $str);
 	$str = preg_replace('/<p[^>]+>/', '<p>', $str);
 	$str = preg_replace('/<div[^>]+>/ms', '', $str);
-	$str = preg_replace('/<\/div>/ms', '', $str);
+	$str = preg_replace('/<\/div>/', '', $str);
 	$str = preg_replace('/<font[^>]+>/ms', '', $str);
 	$str = preg_replace('/<\/font>/ms', '', $str);
 	$str = preg_replace('/<li[^>]+>/ms', '<li>', $str);
@@ -42,6 +42,7 @@ function cleanMarkdown($str)
   $str = preg_replace('/\*\* \*\*/', ' ', $str);
   $str = preg_replace('/\* \*/', ' ', $str);
   $str = preg_replace('/_ _/', ' ', $str);
+  $str = preg_replace('/<\/u>/i', '', $str);
   return $str;
 }
 ?>
