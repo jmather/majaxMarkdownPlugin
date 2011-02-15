@@ -193,6 +193,7 @@ function set'.$id.'Content(cont)
 		'.$id.'_window.close();
 	}
 	setTimeout(tFunc, 100);
+	$(\'#'.$id.'\').change();
 }
 
 (function($){
