@@ -35,7 +35,7 @@ class majaxWidgetFormMarkdownEditor extends sfWidgetFormTextarea {
     $out .= '<button id="'.$id.'_style_guide_button" aria-disabled="false" role="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" id="button"><span class="ui-button-text">Open Style Guide</span></button>';
 
     if (sfConfig::get('app_majaxMarkdown_enable_wvText_converter') !== false)
-      $out .= ' <a href="/majaxMarkdownPlugin/converter.php" target="_blank">Convert A Word File</a>';
+      $out .= ' <a href="/majaxMarkdownPlugin/converter.php?id='.$id.'" target="_blank" onclick="'.$id.'_window = window.open(this.href, \'importer\', \'width=300,height=100,menubar=no,titlebar=no\'); return false;">Convert A Word File</a>';
 
     $out .= '
 <div id="'.$id.'_style_guide" title="Style Guide">
@@ -185,6 +185,16 @@ Violets are blue.
 </div>
 ';
     $out .= '<script type="text/javascript">
+var '.$id.'_window = null;
+function set'.$id.'Content(cont)
+{
+	$(\'#'.$id.'\').val(cont);
+	var tFunc = function() {
+		'.$id.'_window.close();
+	}
+	setTimeout(tFunc, 100);
+}
+
 (function($){
 	$(\'#'.$id.'_style_guide\').dialog({autoOpen: false, width: 700, height: 500});
 	$(\'#'.$id.'_style_guide_button\').click(function() { $(\'#'.$id.'_style_guide\').dialog(\'open\'); return false; });

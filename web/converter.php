@@ -38,7 +38,7 @@ function cleanupHtml($str)
 
 foreach($_FILES as $file)
 {
-	exec('/usr/bin/wvWml '.$file['tmp_name'].' '.$file['tmp_name'].'.txt');
+	exec('/usr/bin/wvHtml '.$file['tmp_name'].' '.$file['tmp_name'].'.txt');
 	$cont = file_get_contents($file['tmp_name'].'.txt');
 	unlink($file['tmp_name']);
 	unlink($file['tmp_name'].'.txt');
@@ -60,8 +60,12 @@ foreach($_FILES as $file)
 	require_once dirname(__FILE__).'/../vendor/markdownify/markdownify_extra_majax.php';
 	$md = new Markdownify_Extra_Majax();
 	$cont = $md->parseString($cont);
+
+	$cont = trim(preg_replace('/<!--[^>]+-->/', '', $cont));
+
 	$cont = wordwrap($cont);
-	echo '<pre>'.$cont.'</pre>';
+
+	echo '<script type="text/javascript">window.opener.set'.$_GET['id'].'Content(unescape(\''.rawurlencode($cont).'\'));</script>';
 	
 }
 ?>
