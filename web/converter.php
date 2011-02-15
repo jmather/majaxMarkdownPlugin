@@ -9,6 +9,23 @@ function clean_content($content)
         $content = trim($content);
         return $content;
 }
+function cleanupHtml($str)
+{
+        $sets = array(
+                '</b><b>',
+                '</u><u>',
+                '</strong><strong>',
+                '</em><em>',
+                '</i><i>',
+        );
+
+        $str = str_replace($sets, '', $str);
+        $str = str_replace($sets, '', $str);
+        $str = str_replace($sets, '', $str);
+        $str = str_replace($sets, '', $str);
+	$str = preg_replace('/<p[^>]+>/', '<p>', $str);
+        return $str;
+}
 ?>
 <html>
 	<head><title>Upload Word File</title></head>
@@ -21,11 +38,29 @@ function clean_content($content)
 
 foreach($_FILES as $file)
 {
-	exec('/usr/bin/wvText '.$file['tmp_name'].' '.$file['tmp_name'].'.txt');
+	exec('/usr/bin/wvWml '.$file['tmp_name'].' '.$file['tmp_name'].'.txt');
 	$cont = file_get_contents($file['tmp_name'].'.txt');
-	$cont = clean_content($cont);
 	unlink($file['tmp_name']);
 	unlink($file['tmp_name'].'.txt');
+	$cont = clean_content($cont);
+	$cont = cleanupHtml($cont);
+	if (class_exists('tidy'))
+	{
+		// Specify configuration
+		$config = array(
+			'indent'         => true,
+			'output-xhtml'   => true,
+			'wrap'           => 200);
+		$tidy = new tidy();
+		$tidy->parseString($cont, $config, 'utf8');
+		$tidy->cleanRepair();
+		$cont = $tidy;
+	}
+
+	require_once dirname(__FILE__).'/../vendor/markdownify/markdownify_extra_majax.php';
+	$md = new Markdownify_Extra_Majax();
+	$cont = $md->parseString($cont);
+	$cont = wordwrap($cont);
 	echo '<pre>'.$cont.'</pre>';
 	
 }
